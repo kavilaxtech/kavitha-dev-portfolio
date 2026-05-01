@@ -5,7 +5,7 @@ import { SectionHeader } from "./SectionHeader";
 const certs = [
   { name: "Python for Data Science", org: "NPTEL" },
   { name: "Machine Learning Foundations", org: "Coursera" },
-  { name: "Web Development", org: "Udemy" },
+  { name: "Oracle Cloud Infrastructure Certified Data Science Professional", org: "Oracle" },
   { name: "SQL Essentials", org: "HackerRank" },
   { name: "Data Analytics", org: "Google" },
   { name: "AI & ML Workshop", org: "IIT Madras" },

@@ -31,7 +31,7 @@ const items = [
       "Developed responsive frontend pages and integrated backend data flows.",
       "Implemented cart, product, and checkout modules with clean UI.",
     ],
-    tools: ["HTML", "CSS", "JavaScript", "MySQL"],
+    tools: ["HTML", "CSS", "JavaScript"],
   },
 ];
 
