@@ -1,11 +1,10 @@
-import { Mail, Linkedin, Github, ArrowUpRight } from "lucide-react";
+import { Mail, Linkedin, Github } from "lucide-react";
 import { Reveal } from "./Reveal";
-import { SectionHeader } from "./SectionHeader";
 
 const links = [
   { icon: Github, label: "GitHub", value: "github.com/kavilaxtech", href: "https://github.com/kavilaxtech" },
-  { icon: Linkedin, label: "LinkedIn", value: "/in/kavithavaishali", href: "https://linkedin.com" },
-  { icon: Mail, label: "Email", value: "kavitha.vaishali@gmail.com", href: "mailto:kavitha.vaishali@gmail.com" },
+  { icon: Linkedin, label: "LinkedIn", value: "linkedin.com/in/kavitha-vaishali-s", href: "https://linkedin.com/in/kavitha-vaishali-s" },
+  { icon: Mail, label: "Email", value: "kavitha.aiml@gmail.com", href: "mailto:kavitha.aiml@gmail.com" },
 ];
 
 export function Contact() {
@@ -39,6 +38,8 @@ export function Contact() {
                   <a
                     key={l.label}
                     href={l.href}
+                    target="_blank"
+                    rel="noreferrer"
                     className="group glass-card hover-lift rounded-2xl p-5 flex flex-col items-center text-center"
                   >
                     <div
@@ -49,7 +50,6 @@ export function Contact() {
                     </div>
                     <div className="text-xs text-accent font-medium">{l.label}</div>
                     <div className="text-sm text-foreground mt-1 truncate max-w-full">{l.value}</div>
-                    <ArrowUpRight size={14} className="mt-3 text-muted-foreground group-hover:text-foreground transition-colors" />
                   </a>
                 ))}
               </div>

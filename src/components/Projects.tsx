@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { X, ArrowUpRight } from "lucide-react";
+import { X } from "lucide-react";
 import { Reveal } from "./Reveal";
 import { SectionHeader } from "./SectionHeader";
 import medibot from "@/assets/project-medibot.jpg";
