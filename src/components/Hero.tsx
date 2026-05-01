@@ -132,6 +132,7 @@ export function Hero() {
             <div className="text-xs text-muted-foreground">Internships</div>
           </div>
         </div>
+      </div>
     </section>
   );
 }
