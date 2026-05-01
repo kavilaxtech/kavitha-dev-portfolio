@@ -1,10 +1,12 @@
 import { useState } from "react";
-import { X, ArrowUpRight } from "lucide-react";
+import { X } from "lucide-react";
 import { Reveal } from "./Reveal";
 import { SectionHeader } from "./SectionHeader";
 import medibot from "@/assets/project-medibot.jpg";
 import learning from "@/assets/project-learning.jpg";
 import cosplay from "@/assets/project-cosplay.jpg";
+import dashboard from "@/assets/project-dashboard.jpg";
+import face from "@/assets/project-face.jpg";
 
 type Project = {
   title: string;
@@ -20,33 +22,53 @@ type Project = {
 const projects: Project[] = [
   {
     title: "MediBot",
-    tagline: "AI-powered medical assistant",
-    description: "Conversational AI that helps users understand symptoms and find reliable health guidance.",
+    tagline: "Intelligent Medical Assistant",
+    description: "AI-based system for symptom-based disease prediction with computer vision wound severity detection and hospital recommendations.",
     image: medibot,
-    stack: ["Python", "NLP", "Flask", "Scikit-learn"],
-    problem: "People often struggle to understand symptoms or interpret medical information quickly and reliably.",
-    solution: "Built a chatbot that uses NLP to interpret natural-language symptom descriptions and respond with structured, source-aware guidance.",
-    outcome: "Achieved accurate intent classification and a smooth Q&A flow — reducing time to first useful answer for the end user.",
+    stack: ["Python", "Scikit-learn", "OpenCV", "Streamlit"],
+    problem: "Patients struggle to interpret symptoms, gauge wound severity, and quickly find appropriate medical care.",
+    solution: "Built an AI-based system for symptom-based disease prediction, integrated computer vision for wound severity detection, and added hospital recommendation support.",
+    outcome: "Delivered an end-to-end assistant that guides users from symptom check to nearest care option.",
   },
   {
     title: "AI Learning Assistant",
     tagline: "Personalised study companion",
-    description: "An assistant that adapts content delivery to each learner's level and progress.",
+    description: "Personalized AI assistant delivering contextual, adaptive responses to support self-paced learning.",
     image: learning,
-    stack: ["Python", "ML", "OpenAI API", "React"],
+    stack: ["Python", "Machine Learning", "Streamlit"],
     problem: "Static learning content rarely fits each student's pace, gaps, or learning style.",
-    solution: "Designed an adaptive system that surfaces personalised explanations, quizzes, and revision plans based on user interactions.",
-    outcome: "Improved learner engagement and retention through targeted micro-content and feedback loops.",
+    solution: "Developed a personalized learning assistant that delivers contextual and adaptive responses to support self-paced learning.",
+    outcome: "Improved learner engagement through targeted explanations and adaptive feedback loops.",
   },
   {
-    title: "Cosplay E-commerce",
+    title: "Cosplay E-Commerce Website",
     tagline: "Themed online store",
-    description: "Full e-commerce experience for cosplay enthusiasts — catalog, cart, and checkout flows.",
+    description: "Responsive e-commerce platform with product listing and cart functionality, focused on clean UI and usability.",
     image: cosplay,
     stack: ["HTML", "CSS", "JavaScript"],
     problem: "Niche cosplay shoppers had limited dedicated platforms with smooth UX.",
-    solution: "Built an end-to-end storefront with product browsing, search, cart, and order management.",
-    outcome: "Delivered a responsive, themed shopping experience with reliable backend data handling.",
+    solution: "Designed a responsive e-commerce platform, implemented product listing and cart functionality, and focused on clean UI and usability.",
+    outcome: "Delivered a polished, themed shopping experience that's easy to browse and check out from.",
+  },
+  {
+    title: "Intern Analytics Dashboard",
+    tagline: "Performance monitoring dashboard",
+    description: "Dashboard to monitor intern performance and activity with key metrics, data insights, and an intuitive progress-tracking interface.",
+    image: dashboard,
+    stack: ["Python", "React", "JavaScript", "Chart.js"],
+    problem: "Mentors lacked a single view to track intern performance, activity, and progress over time.",
+    solution: "Built a dashboard to monitor intern performance and activity, visualized key metrics and data insights, and designed an intuitive interface for tracking progress.",
+    outcome: "Made intern performance transparent and decisions data-driven with clear, real-time visualizations.",
+  },
+  {
+    title: "Real-Time Face Identification in Video Streams",
+    tagline: "Computer vision · real-time recognition",
+    description: "System that identifies individuals in video streams using face embeddings and frame sampling for optimized real-time performance.",
+    image: face,
+    stack: ["Python", "OpenCV", "Face Recognition", "Deep Learning"],
+    problem: "Identifying people accurately in live video is computationally expensive and prone to lag.",
+    solution: "Used face embeddings for accurate recognition and applied frame sampling to optimize performance, improving efficiency in real-time processing.",
+    outcome: "Achieved reliable real-time identification with significantly reduced compute overhead.",
   },
 ];
 
@@ -79,9 +101,6 @@ export function Projects() {
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent" />
-                  <div className="absolute top-3 right-3 w-9 h-9 rounded-full bg-background/70 backdrop-blur border border-border flex items-center justify-center text-foreground opacity-0 group-hover:opacity-100 transition-opacity">
-                    <ArrowUpRight size={16} />
-                  </div>
                 </div>
                 <div className="p-6 flex-1 flex flex-col">
                   <div className="text-xs text-accent font-medium mb-1">{p.tagline}</div>

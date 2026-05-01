@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { ArrowRight, Download, Github, Linkedin, Mail, MapPin } from "lucide-react";
-import heroVisual from "@/assets/hero-visual.jpg";
+import { ArrowRight, Github, Linkedin, Mail, MapPin } from "lucide-react";
+import profileHero from "@/assets/profile-hero.png";
 
 const roles = [
   "Software Developer",
@@ -68,24 +68,26 @@ export function Hero() {
               <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
             </a>
             <a
-              href="#"
+              href="#contact"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-medium border border-border bg-card/40 backdrop-blur hover:bg-card transition-colors"
             >
-              <Download size={18} />
-              Download Resume
+              Get in touch
             </a>
           </div>
 
           <div className="flex items-center gap-4 pt-4">
             {[
-              { icon: Github, href: "https://github.com" },
-              { icon: Linkedin, href: "https://linkedin.com" },
-              { icon: Mail, href: "mailto:hello@example.com" },
-            ].map(({ icon: Icon, href }, i) => (
+              { icon: Github, href: "https://github.com/kavilaxtech", label: "GitHub" },
+              { icon: Linkedin, href: "https://linkedin.com/in/kavitha-vaishali-s", label: "LinkedIn" },
+              { icon: Mail, href: "mailto:kavitha.aiml@gmail.com", label: "Email" },
+            ].map(({ icon: Icon, href, label }, i) => (
               <a
                 key={i}
                 href={href}
-                className="w-10 h-10 rounded-lg glass-card flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-primary/50 transition-all"
+                target="_blank"
+                rel="noreferrer"
+                aria-label={label}
+                className="w-10 h-10 rounded-lg glass-card flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-primary/50 transition-all hover:scale-110"
               >
                 <Icon size={18} />
               </a>
@@ -93,16 +95,26 @@ export function Hero() {
           </div>
         </div>
 
-        {/* Right - hero visual */}
+        {/* Right - profile photo */}
         <div className="relative aspect-square max-w-md mx-auto lg:max-w-none">
+          {/* Rotating gradient ring */}
           <div
-            className="absolute inset-0 rounded-3xl blur-3xl opacity-50 animate-[glow-pulse_4s_ease-in-out_infinite]"
+            className="absolute -inset-4 rounded-full opacity-60 blur-2xl animate-[glow-pulse_4s_ease-in-out_infinite]"
             style={{ background: "var(--gradient-primary)" }}
           />
-          <div className="relative rounded-3xl overflow-hidden glass-card animate-[float_6s_ease-in-out_infinite]">
+          <div
+            className="absolute inset-0 rounded-3xl border-2 border-primary/30"
+            style={{
+              background: "conic-gradient(from 0deg, transparent, hsl(var(--primary)/0.4), transparent, hsl(var(--accent)/0.4), transparent)",
+              animation: "spin 12s linear infinite",
+              padding: "2px",
+            }}
+          />
+          {/* Photo */}
+          <div className="relative rounded-3xl overflow-hidden glass-card animate-[float_6s_ease-in-out_infinite] aspect-square">
             <img
-              src={heroVisual}
-              alt="Abstract floating geometric shapes representing creativity and technology"
+              src={profileHero}
+              alt="Kavitha Vaishali S — portrait"
               width={1024}
               height={1024}
               className="w-full h-full object-cover"
@@ -111,11 +123,11 @@ export function Hero() {
           </div>
 
           {/* Floating stat cards */}
-          <div className="absolute -left-4 top-12 glass-card rounded-2xl px-4 py-3 animate-[float-slow_9s_ease-in-out_infinite]">
+          <div className="absolute -left-4 top-12 glass-card rounded-2xl px-4 py-3 animate-[float-slow_9s_ease-in-out_infinite] z-10">
             <div className="text-2xl font-bold text-gradient-primary">10+</div>
             <div className="text-xs text-muted-foreground">Projects built</div>
           </div>
-          <div className="absolute -right-2 bottom-16 glass-card rounded-2xl px-4 py-3 animate-[float_7s_ease-in-out_infinite]">
+          <div className="absolute -right-2 bottom-16 glass-card rounded-2xl px-4 py-3 animate-[float_7s_ease-in-out_infinite] z-10">
             <div className="text-2xl font-bold text-gradient-primary">3</div>
             <div className="text-xs text-muted-foreground">Internships</div>
           </div>
