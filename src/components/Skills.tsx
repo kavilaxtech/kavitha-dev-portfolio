@@ -21,7 +21,7 @@ const groups = [
   {
     icon: Wrench,
     title: "Tools",
-    items: ["Git & GitHub", "VS Code", "Jupyter", "MySQL"],
+    items: ["Git & GitHub", "VS Code", "Jupyter"],
   },
 ];
 

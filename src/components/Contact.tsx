@@ -3,9 +3,9 @@ import { Reveal } from "./Reveal";
 import { SectionHeader } from "./SectionHeader";
 
 const links = [
-  { icon: Mail, label: "Email", value: "kavitha.vaishali@example.com", href: "mailto:kavitha.vaishali@example.com" },
+  { icon: Github, label: "GitHub", value: "github.com/kavilaxtech", href: "https://github.com/kavilaxtech" },
   { icon: Linkedin, label: "LinkedIn", value: "/in/kavithavaishali", href: "https://linkedin.com" },
-  { icon: Github, label: "GitHub", value: "@kavithavaishali", href: "https://github.com" },
+  { icon: Mail, label: "Email", value: "kavitha.vaishali@gmail.com", href: "mailto:kavitha.vaishali@gmail.com" },
 ];
 
 export function Contact() {

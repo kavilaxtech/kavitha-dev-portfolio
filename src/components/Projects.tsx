@@ -43,7 +43,7 @@ const projects: Project[] = [
     tagline: "Themed online store",
     description: "Full e-commerce experience for cosplay enthusiasts — catalog, cart, and checkout flows.",
     image: cosplay,
-    stack: ["HTML", "CSS", "JavaScript", "MySQL"],
+    stack: ["HTML", "CSS", "JavaScript"],
     problem: "Niche cosplay shoppers had limited dedicated platforms with smooth UX.",
     solution: "Built an end-to-end storefront with product browsing, search, cart, and order management.",
     outcome: "Delivered a responsive, themed shopping experience with reliable backend data handling.",
