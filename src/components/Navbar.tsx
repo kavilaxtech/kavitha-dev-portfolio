@@ -27,7 +27,7 @@ export function Navbar() {
     >
       <nav className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         <a href="#home" className="font-display font-bold text-lg text-gradient-primary">
-          KV.
+          Kavila
         </a>
         <ul className="hidden md:flex items-center gap-8 text-sm">
           {links.map((l) => (
